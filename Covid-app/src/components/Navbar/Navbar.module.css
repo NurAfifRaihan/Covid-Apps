@@ -1,8 +1,8 @@
 /* Small Screen */
 .container {
-    background-color: #d143ee;
+    background-color: #118AB2;
     padding: 1rem;
-    color: #f9e2e2;
+    color: #ffffff;
   }
   
   .navbar {
@@ -11,7 +11,7 @@
   }
   
   .navbar__brand {
-    font-size: 2.4rem;
+    font-size: 3.5rem;
     margin-bottom: 1rem;
   }
   
