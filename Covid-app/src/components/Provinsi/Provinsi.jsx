@@ -1,10 +1,9 @@
-import { useState } from 'react';
 import styles from './Provinsi.module.css';
-import data from '../../utils/constants/provinces';
 import Provin from '../Provin/Provin';
 
-const Provinsi = () => {
-    const [prov] = useState(data.provinces);
+
+function Provinsi (props) {
+    const {prov} = props;
 
     return (
         <div className={styles.tableContainer}>
