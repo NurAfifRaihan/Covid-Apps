@@ -6,10 +6,10 @@ import Main from "../../components/Main/Main";
 import Global from "../../components/global-section/Global";
 import Form from "../../components/Form/Form";
 import Provinsi from "../../components/Provinsi/Provinsi";
-import data from '../../utils/constants/provinces'; // Assuming data is imported correctly
+import data from '../../utils/constants/provinces'; 
 
 function HomePage() {
-  const [provinsiData, setProvinsiData] = useState(data.provinces); // Initial state with data
+  const [provinsiData, setProvinsiData] = useState(data.provinces); 
   return (
     <div>
       <Navbar />

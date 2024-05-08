@@ -7,8 +7,17 @@ function Form({ prov, setProvinsiData }) {
   const [status, setStatus] = useState('');
   const [jumlah, setJumlah] = useState('');
 
+  //membuat state error
+  const [isFormError, setIsFormError] = useState(false);
+
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    if (kota === '' || status === '' || jumlah === '') {
+      setIsFormError(true);
+      return;
+    }
+
     // Panggil fungsi handleAddCase dengan objek yang berisi data yang dimasukkan oleh pengguna
     setProvinsiData(prevState => {
       const existingProvinsi = prevState.find(item => item.kota === kota);
@@ -64,6 +73,7 @@ function Form({ prov, setProvinsiData }) {
     setKota('');
     setStatus('');
     setJumlah('');
+    setIsFormError(false); // Reset form error state
   };
 
   return (
@@ -113,6 +123,7 @@ function Form({ prov, setProvinsiData }) {
                   value={jumlah}
                   onChange={(event) => setJumlah(event.target.value)}
                 />
+                {isFormError && <p>Semua field harus diisi</p>}
               </div>
               <button type="submit">Tambah</button>
             </form>

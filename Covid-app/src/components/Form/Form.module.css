@@ -30,6 +30,10 @@ label {
   border-radius: 25px;
 }
 
+.formGroup p {
+  color: #EF476F;
+}
+
 input,
 select {
   width: 100%;
