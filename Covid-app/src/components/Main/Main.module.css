@@ -20,7 +20,7 @@
   }
   
   .main__genre {
-    color: #FFD166;
+    color: #07b48c;
     margin-bottom: 1rem;
     font-size: 1.59rem;
   }
@@ -28,6 +28,7 @@
   .main__description {
     color: #3d506b;
     margin-bottom: 1rem;
+    font-size: 19px;
   }
   
   .main__button {

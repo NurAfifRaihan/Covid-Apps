@@ -6,8 +6,8 @@ function Main(){
             <section className={styles.main}>
                 <div className={styles.main__left}>
                     <h2 className={styles.main__title}>Covid ID</h2>
-                    <h3 className={styles.main__genre}></h3>
-                    <p className={styles.main__description}>Transformers adalah serangkaian film aksi fiksi ilmiah berdasarkan franchise Transformers yang disutradarai Michael Bay dari lima film aksi langsung pertama: Transformers, Revenge of the Fallen, Dark of the Moon, Age of Extinction, dan The Last Knight, dan telah berperan sebagai produser untuk film berikutnya. </p>
+                    <h3 className={styles.main__genre}>Mentoring Perkembangan Covid</h3>
+                    <p className={styles.main__description}>Vaksinasi Covid-19 merupakan salah satu upaya pemerintah Indonesia dalam menangani masalah Covid-19. Vaksinasi Covid-19 bertujuan untuk menciptakan kekebalan kelompok (herd immunity) agar masyarakat menjadi lebih produktif dalam menjalankan aktivitas kesehariannya.</p>
                     <button className={styles.main__button}>Vaccine</button>
                 </div>
                 <div className={styles.main__right}>
