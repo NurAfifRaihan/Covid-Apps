@@ -1,3 +1,5 @@
+import styled from "styled-components";
+const StyledForm = styled.div`
 .formContainer {
   margin-bottom: 20px;
 }
@@ -61,13 +63,10 @@ button:hover {
    * Nothing TODO Here.
    * We dont change style form. 
    */
-}
-
-/* Large Screen */
-@media (min-width: 992px) {
-  .container {
+   .container {
     max-width: 1200px;
     margin: 3rem auto;
+    
   }
 
   .form {
@@ -86,3 +85,32 @@ button:hover {
     flex-basis: 60%;
   }
 }
+
+/* Large Screen */
+@media (min-width: 992px) {
+  .container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    
+  }
+
+  .form {
+    margin: 0 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .form__left {
+    flex-basis: 40%;
+  }
+
+  .form__right {
+    flex-basis: 60%;
+  }
+}
+`;
+
+export default StyledForm
+

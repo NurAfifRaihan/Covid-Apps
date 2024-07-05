@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import styles from './Form.module.css';
 import { nanoid } from "nanoid"; 
+import StyledForm from './Form.module';
 
 function Form({ prov, setProvinsiData }) {
   const [kota, setKota] = useState('');
@@ -77,16 +77,17 @@ function Form({ prov, setProvinsiData }) {
   };
 
   return (
-    <div className={styles.container}>
-    <section className={styles.form}>
-    <div className={styles.form__left}>
-            <img className={styles.form__image} src="/img/p.svg" alt="placeholder" />
+    <StyledForm>
+    <div className="container">
+    <section className="form">
+    <div className="form__left">
+            <img className="form__image" src="/img/p.svg" alt="placeholder" />
         </div>
-        <div className={styles.form__right}>
-          <div className={styles.formContainer}>
+        <div className="form__right">
+          <div className="formContainer">
             <h2>Form Input Kasus COVID</h2>
             <form onSubmit={handleSubmit}>
-              <div className={styles.formGroup}>
+              <div className="formGroup">
                 <label htmlFor="provinsi">Provinsi:</label>
                 <select
                   id="provinsi"
@@ -101,7 +102,7 @@ function Form({ prov, setProvinsiData }) {
                   ))}
                 </select>
               </div>
-              <div className={styles.formGroup}>
+              <div className="formGroup">
                 <label htmlFor="status">Status:</label>
                 <select
                   id="status"
@@ -115,7 +116,7 @@ function Form({ prov, setProvinsiData }) {
                   <option value="meninggal">Meninggal</option>
                 </select>
               </div>
-              <div className={styles.formGroup}>
+              <div className="formGroup">
                 <label htmlFor="jumlah">Jumlah:</label>
                 <input
                   type="number"
@@ -132,6 +133,7 @@ function Form({ prov, setProvinsiData }) {
                 
             </section>
         </div>
+        </StyledForm>
   );
 }
 

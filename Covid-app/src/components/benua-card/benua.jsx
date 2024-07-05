@@ -1,7 +1,7 @@
 
-import Card from "./global.module";
+import Card from "./benua.module";
 
-function GlobalCard(props) {
+function BenuaCard(props) {
     const { status, total } = props;
 
     return (
@@ -12,4 +12,4 @@ function GlobalCard(props) {
     );
 }
 
-export default GlobalCard;
+export default BenuaCard;

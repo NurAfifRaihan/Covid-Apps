@@ -1,4 +1,6 @@
-/* Small Screen */
+import styled from "styled-components";
+
+const StyledMain = styled.div`
 .container {
     margin: 1rem;
   }
@@ -78,3 +80,6 @@
     }
   }
   
+`;
+
+export default StyledMain;

@@ -1,3 +1,6 @@
+import styled from "styled-components";
+
+const Tabel = styled.div`
 .tableContainer {
     width: 100%;
     max-width: 600px;
@@ -35,3 +38,6 @@
       background-color: #69f0cc;
     }
   }
+`;
+
+export default Tabel;

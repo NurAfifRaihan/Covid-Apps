@@ -1,15 +1,17 @@
-import styles from './Provinsi.module.css';
 import Provin from '../Provin/Provin';
+import Tabel from './Provinsi.module';
+
 
 
 function Provinsi (props) {
     const {prov} = props;
 
     return (
-        <div className={styles.tableContainer}>
+        <Tabel>
+        <div className="tableContainer">
             <h1>Provinsi</h1>
             <h3>Data Covid Berdasarkan Provinsi</h3>
-            <table className={styles.provinsi}>
+            <table className="provinsi">
                 <thead>
                     <tr>
                         <th>No</th>
@@ -35,6 +37,7 @@ function Provinsi (props) {
                 </tbody>
             </table>
         </div>
+        </Tabel>
     );
 }
 

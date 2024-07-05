@@ -1,4 +1,5 @@
-import styles from "./Navbar.module.css";
+import { Link } from "react-router-dom";
+import StyledNavbar from "./Navbar.module";
 
 function Navbar (){
     /**
@@ -6,21 +7,31 @@ function Navbar (){
      * memanggilnya menggunakan expresion
      */
     return (
-        <div className={styles.container}>
-            <nav className={styles.navbar}>
+        <StyledNavbar>
+        <div className="container">
+            <nav className="navbar">
                 <div>
-                    <h1 className={styles.navbar__brand}>Covid App</h1>
+                    <h1 className="navbar__brand">Covid App</h1>
                 </div>
                 <div>
-                    <ul className={styles.navbar__list}>
-                        <li className={styles.navbar__item}>Global</li>   
-                        <li className={styles.navbar__item}>Indonesia</li>   
-                        <li className={styles.navbar__item}>Provinsi</li>   
-                        <li className={styles.navbar__item}>About</li> 
+                    <ul className="navbar__list">
+                        <li className="navbar__item">
+                            <Link to="/"> Global </Link>
+                        </li>   
+                        <li className="navbar__item">
+                            <Link to="/wilayah/indonesia">Indonesia</Link>
+                        </li>   
+                        <li className="navbar__item">
+                            <Link to="/wilayah/provinsi">Provinsi</Link>
+                        </li>   
+                        <li className="navbar__item">
+                            <Link to="/wilayah/about">About</Link>
+                        </li> 
                     </ul>
                 </div>
             </nav>
         </div>
+        </StyledNavbar>
     )
 }
 

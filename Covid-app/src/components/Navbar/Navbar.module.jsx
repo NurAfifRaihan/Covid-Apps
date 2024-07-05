@@ -1,5 +1,7 @@
-/* Small Screen */
-.container {
+import styled from "styled-components";
+
+const StyledNavbar = styled.div`
+  .container {
     background-color: #118AB2;
     padding: 1rem;
     color: #ffffff;
@@ -23,6 +25,15 @@
   
   .navbar__item {
     margin-bottom: 1rem;
+  }
+
+  .navbar__item a {
+    text-decoration: none;
+    color: white; /* Warna teks untuk link */
+  }
+
+  .navbar__item a:hover {
+    color: white; /* Warna teks saat di-hover */
   }
   
   /* Medium Screen */
@@ -53,4 +64,6 @@
      * We haven't styling Navbar.
      */
   }
-  
+`;
+
+export default StyledNavbar;

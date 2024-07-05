@@ -1,23 +1,30 @@
-import { useState } from 'react';
-import styles from './Global.module.css';
-import data from "../../utils/constants/indonesia";
-import GlobalCard from '../global/global'; 
+import { useState, useEffect } from 'react';
+import GlobalCard from '../global/global';
+import StyledCard from './Global.module';
 
 function Global() {
+    const [kasus, setKasus] = useState([]);
 
-    const [kasus] = useState(data.indonesia);
+    useEffect(() => {
+        fetch('https://covid-fe-2023.vercel.app/api/indonesia.json')
+            .then(response => response.json())
+            .then(data => setKasus(data.indonesia))
+            .catch(error => console.error('Error fetching data:', error));
+    }, []);
 
-  return (
-    <div className={styles.container}>
-      <h1>Indonesia</h1>
-      <p>Data Covid Berdasarkan Indonesia</p>
-      <div className={styles.cardContainer}>
-        {kasus.map((cases) => {
-            return <GlobalCard key={cases.status} status={cases.status} total={cases.total} />;
-        })}
-      </div>
-    </div>
-  );
+    return (
+        <StyledCard>
+            <div className="container">
+                <h1>Indonesia</h1>
+                <p>Data Covid Berdasarkan Indonesia</p>
+                <div className="cardContainer">
+                    {kasus.map((cases) => (
+                        <GlobalCard key={cases.status} status={cases.status} total={cases.total} />
+                    ))}
+                </div>
+            </div>
+        </StyledCard>
+    );
 }
 
 export default Global;

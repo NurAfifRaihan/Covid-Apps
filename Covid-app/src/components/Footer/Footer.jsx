@@ -1,4 +1,4 @@
-import styles from "./Footer.module.css";
+import StyledFooter from "./Footer.module"
 
 function Footer(){
     /**
@@ -6,23 +6,25 @@ function Footer(){
      * memanggilnya menggunakan expresion
      */
     return(
-        <div className={styles.container}>
-            <footer className={styles.footer}>
+        <StyledFooter>
+        <div className="container">
+            <footer className="footer">
                 <div>
-                <h2 className={styles.footer__title}>Covid App</h2>
-                <p className={styles.footer__author}>Create by Lurking Choco</p>
+                <h2 className="footer__title">Covid App</h2>
+                <p className="footer__author">Create by Lurking Choco</p>
                 </div>
                 <div>
-                    <ul className={styles.footer__list}>
-                        <li className={styles.footer__item}>Global</li>   
-                        <li className={styles.footer__item}>Indonesia</li>   
-                        <li className={styles.footer__item}>Provinsi</li>   
-                        <li className={styles.footer__item}>About</li>  
+                    <ul className="footer__list">
+                        <li className="footer__item">Global</li>   
+                        <li className="footer__item">Indonesia</li>   
+                        <li className="footer__item">Provinsi</li>   
+                        <li className="footer__item">About</li>  
                     </ul>
                 </div>
             </footer>
         </div>
+        </StyledFooter>
     )
 }
 
-export default Footer
+export default Footer;
