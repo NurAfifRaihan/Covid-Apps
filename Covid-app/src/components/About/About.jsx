@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import StyledAbout from './About.module';
+import ENDPOINTS from '../../utils/constants/endpoints';
 
 function Berita () {
   const [articles, setArticles] = useState([]);
@@ -8,7 +9,7 @@ function Berita () {
   useEffect(() => {
     const fetchArticles = async () => {
       try {
-        const response = await fetch('https://newsapi.org/v2/everything?q=keyword&apiKey=6858a130bbc94e0f958663bf6330ce78');
+        const response = await fetch(ENDPOINTS.NEWS);
         const data = await response.json();
         setArticles(data.articles);
         setLoading(false);
